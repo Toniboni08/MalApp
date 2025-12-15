@@ -28,3 +28,11 @@ h1 {
     background-color: gold;
     border-radius: 10px;
 }
+textarea {
+   background-image:linear-gradient(
+      hsl(190,10%,98%), hsl(190,10%,94%);
+   ); 
+   padding:1ex;
+   font-size:1em;
+   box-sizing:border-box;
+}
