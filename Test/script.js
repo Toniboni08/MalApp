@@ -25,7 +25,7 @@ async function offer() {
         console.log(peer.connectionState);
     }
 
-    peer.createDataChannel("asd");
+    peer.createDataChannel("martinistdoof");
     let offer = await peer.createOffer()
     peer.setLocalDescription(offer);
 }
