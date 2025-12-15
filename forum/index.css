@@ -7,13 +7,16 @@ h1 {
 }
 
 #asd {
-    display: inline-flex;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(163, 163, 163, 1) 50%, rgba(163, 163, 163, 1) 100%);
     width: 100%;
     margin: 0;
     margin-bottom: 50px;
 }
 
-#asd > * {
+#dsa {
+    display: inline-flex;
+}
+
+#dsa > * {
     padding: 10px;
 }
