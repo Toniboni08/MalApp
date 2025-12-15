@@ -25,7 +25,11 @@ async function offer() {
         console.log(peer.connectionState);
     }
 
-    peer.createDataChannel("martinistdoof");
+    let channel = peer.createDataChannel("martinistdoof");
+    channel.onopen = event => {
+        channel.send("Test")
+    }
+
     let offer = await peer.createOffer()
     peer.setLocalDescription(offer);
 }
@@ -56,6 +60,12 @@ async function answer(offer) {
                 "candidates": candidates,
                 "answer": answer
             }));
+        }
+    }
+
+    peer.ondatachannel = event => {
+        event.channel.onmessage = event => {
+            console.log(event.data)
         }
     }
 
