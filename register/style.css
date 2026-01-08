@@ -1,0 +1,39 @@
+div.contentContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.box {
+    width: 300px;
+    background-color: black;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    grid-row: 1;
+}
+
+h2#usernameText {
+    color: white;
+    text-align: center;
+}
+
+div.textContainer {
+    margin: 50px;
+}
+
+input#usernameInput {
+    height: 30px;
+    font-size: large;
+}
+
+p#successText {
+    color: red;
+    text-align: center;
+}
+
+button#registerButton {
+    margin: 50px;
+    height: 50px;
+}
