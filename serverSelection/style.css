@@ -1,3 +1,13 @@
+body {
+    background-color: rgb(34, 34, 34);
+    margin: 0px;
+}
+
+iframe#topBar {
+    width: 100%;
+    height: 200px;
+}
+
 div.contentContainer {
     width: 100%;
     display: flex;
@@ -33,10 +43,15 @@ h2#successText {
     text-align: center;
 }
 
-button#setButton {
+div#setButton {
     margin: 50px;
     height: 50px;
     font-size: large;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
 }
 
 h1#title {

@@ -3,28 +3,20 @@ body {
     background-color: rgb(34, 34, 34);
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
-h1 {
-    color: red;
+iframe#topBar {
+    width: 100%;
+    height: 200px;
 }
 
-#topBar {
-    position: relative;
-    display: inline-flex;
-    background: #868686;
-    width: calc(100% - 50px);
-    margin: 25px 25px 0px 25px;
-    border-radius: 10px;
+div#outerContainer {
+    width: 100%;
 }
 
-#topBar > * {
-    padding: 10px;
-}
-
-div.outerContainer {
+div.innerContainer {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
     overflow: auto;
     margin: 50px;
     background-color: black;
@@ -56,12 +48,15 @@ div#messages > * {
     max-width: 75%;
     min-height: 100px;
     border-radius: 25px;
+    white-space: pre-wrap;
 
     display: flex;
     flex-direction: column;
 }
 
 div#sendBox {
+    user-select: none;
+
     margin: 50px;
     border-radius: 25px;
     max-height: 50%;
@@ -71,16 +66,18 @@ div#sendBox {
 }
 
 div#messageInput {
-    margin: 50px;
+    margin: 10px;
     max-height: calc(100% - 100px);
     overflow: scroll;
     outline: none;
+    min-height: calc(100% - 20px);
     width: 100%;
     font-size: 30px;
+    white-space: pre;
 }
 
 div#sendButton {
-    margin: 50px;
+    margin: 10px;
     width: 75px;
     height: 75px;
     background-color: rgb(97, 97, 97);
@@ -92,22 +89,5 @@ div#sendButton {
 }
 
 div#sendButton > svg {
-    height: 50px;
-}
-
-div#addButton {
-    margin: 25px;
-    height: 75px;
-    width: 75px;
-    background-color: rgb(97, 97, 97);
-    border-radius: 100px;
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div#addButton > svg {
     height: 50px;
 }

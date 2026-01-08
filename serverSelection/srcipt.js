@@ -1,11 +1,13 @@
+const iframe = document.querySelector("iframe")
+
 window.onresize = () => {
     const container = document.querySelector("div.contentContainer")
-    container.style.height = (window.innerHeight - container.clientTop - (container.clientHeight / 2)) + "px"
+    container.style.height = (window.innerHeight - container.getBoundingClientRect().top) + "px"
 }
 
-window.onresize()
+iframe.onload = () => { window.onresize() }
 
-const setButton = document.querySelector("button#setButton")
+const setButton = document.querySelector("div#setButton")
 const serverInput = document.querySelector("input#serverInput")
 const successText = document.querySelector("h2#successText")
 
@@ -17,6 +19,7 @@ function testConnection(url, successMessage, failMessage) {
                 successText.style.color = "green"
                 successText.innerHTML = successMessage
                 ws.close()
+                iframe.contentWindow.location.reload()
                 resolve(true)
             }
 

@@ -7,14 +7,10 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <a href="../index.html">
-        <div id="topBar">
-            <img width="100px" src="/resources/Athene.png">
-            <h1 id="forumName"> Forum</h1>
-        </div>
-    </a>
+    <iframe src="../top/?title=Forum" frameborder="0" id="topBar"></iframe>
 
-    <div class="outerContainer">
+    <div id="outerContainer">
+        <div class="innerContainer">
         <div class="messagesContainer">
             <div class="scrollBarContainer">
                 <div id="messages">
@@ -22,18 +18,14 @@
             </div>
         </div>
         <div id="sendBox">
-            <div id="addButton">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/></svg>
-            </div>
-            <div id="messageInput" contenteditable>
-
-            </div>
+            <div id="messageInput"></div>
             <div id="sendButton">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M568.4 37.7C578.2 34.2 589 36.7 596.4 44C603.8 51.3 606.2 62.2 602.7 72L424.7 568.9C419.7 582.8 406.6 592 391.9 592C377.7 592 364.9 583.4 359.6 570.3L295.4 412.3C290.9 401.3 292.9 388.7 300.6 379.7L395.1 267.3C400.2 261.2 399.8 252.3 394.2 246.7C388.6 241.1 379.6 240.7 373.6 245.8L261.2 340.1C252.1 347.7 239.6 349.7 228.6 345.3L70.1 280.8C57 275.5 48.4 262.7 48.4 248.5C48.4 233.8 57.6 220.7 71.5 215.7L568.4 37.7z"/></svg>
             </div>
         </div>
     </div>
+    </div>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

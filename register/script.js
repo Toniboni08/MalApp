@@ -1,15 +1,17 @@
+const iframe = document.querySelector("iframe")
+
 window.onresize = () => {
     const container = document.querySelector("div.contentContainer")
-    container.style.height = (window.innerHeight - container.clientTop - (container.clientHeight / 2)) + "px"
+    container.style.height = (window.innerHeight - container.getBoundingClientRect().top) + "px"
 }
 
-window.onresize()
+iframe.onload = () => { window.onresize() }
 
 if(localStorage.getItem("serverURL") == null) {
     window.location.replace("../serverSelection")
 }
 
-const registerButton = document.querySelector("button#registerButton")
+const registerButton = document.querySelector("div#registerButton")
 const usernameInput = document.querySelector("input#usernameInput")
 const successText = document.querySelector("h2#successText")
 
@@ -30,6 +32,7 @@ registerButton.onclick = () => {
                 successText.innerHTML = "Success!"
                 localStorage.setItem("name", name)
                 localStorage.setItem("secret", json.secret)
+                iframe.contentWindow.location.reload()
             } else {
                 successText.style.color = "red"
                 successText.innerHTML = "This username has allready been taken!"

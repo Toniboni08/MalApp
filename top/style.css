@@ -1,0 +1,55 @@
+h1#companyName {
+    color: red;
+}
+
+h1#title {
+    margin: auto;
+}
+
+.inline {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inline > div {
+    background-color: #868686;
+    border-radius: 15px;
+    margin: auto;
+    margin-right: 25px;
+}
+
+.inline > div > p {
+    margin: 5px;
+}
+
+div#status {
+    min-width: 100px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    background-color: antiquewhite;
+    flex-shrink: 1;
+}
+
+div#topBar {
+    display: flex;
+    width: calc(100% - 50px);
+    margin: 25px 25px 0px 25px;
+    border-radius: 10px;
+    background: #868686;
+    align-items: center;
+    justify-content: center;
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+}
+
+#home > * {
+    padding: 10px;
+}
