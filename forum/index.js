@@ -7,7 +7,7 @@ for (let index = 0; index < nameModifiable.length; index++) {
 }
 
 if (localStorage.getItem("name") == null || localStorage.getItem("secret") == null || localStorage.getItem("serverURL") == null) {
-    window.location.replace("/register")
+    window.location.replace("../register")
 }
 
 

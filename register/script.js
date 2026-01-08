@@ -6,7 +6,7 @@ window.onresize = () => {
 window.onresize()
 
 if(localStorage.getItem("serverURL") == null) {
-    window.location.replace("/serverSelection")
+    window.location.replace("../serverSelection")
 }
 
 const registerButton = document.querySelector("button#registerButton")
