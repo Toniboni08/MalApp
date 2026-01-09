@@ -9,15 +9,15 @@ usernameText.innerHTML += localStorage.getItem("name")
 serverText.innerHTML += localStorage.getItem("serverURL")
 
 serverButton.onclick = () => {
-    parent.location.href = "../serverSelection"
+    parent.location.href = "../serverSelection/index.html"
 }
 
 usernameButton.onclick = () => {
-    parent.location.href = "../register"
+    parent.location.href = "../register/index.html"
 }
 
 home.onclick = () => {
-    parent.location.href = ".."
+    parent.location.href = "../index.html"
 }
 
 title.innerHTML = new  URLSearchParams(document.location.search).get("title")

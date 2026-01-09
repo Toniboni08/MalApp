@@ -20,7 +20,7 @@ const messages = document.querySelector("div#messages")
 const scrollBarContainer = document.querySelector("div.scrollBarContainer")
 const iframe = document.querySelector("iframe#topBar")
 
-iframe.src = "../top/?title=" + searchExtensions.get("forum") + " Forum"
+iframe.src = "../top/index.html?title=" + searchExtensions.get("forum") + " Forum"
 
 const ws = new WebSocket(localStorage.getItem("serverURL"))
 
