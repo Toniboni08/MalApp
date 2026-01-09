@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+}
+
+div#footer {
+    position: absolute;
+    width: calc(100% - 100px);
+    bottom: 0px;
+    background-color: black;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+div#right {
+    margin: auto;
+    margin-right: 0px;
+    max-width: 300px;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+    color: red;
+}

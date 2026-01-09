@@ -3,11 +3,6 @@ body {
     margin: 0px;
 }
 
-iframe#topBar {
-    width: 100%;
-    height: 200px;
-}
-
 div.contentContainer {
     width: 100%;
     display: flex;
@@ -56,4 +51,14 @@ div#setButton {
 
 h1#title {
     text-align: center;
+}
+
+iframe#topBar {
+    width: 100%;
+    height: 155.5px;
+}
+
+iframe#footer {
+    width: 100%;
+    height: 514.7px;
 }

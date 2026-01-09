@@ -9,7 +9,7 @@ for (let index = 0; index < nameModifiable.length; index++) {
 
 window.onresize = () => {
     const container = document.querySelector("div#outerContainer")
-    container.style.height = (window.innerHeight - container.getBoundingClientRect().top) + "px"
+    container.style.height = (window.innerHeight - (container.getBoundingClientRect().top + window.scrollY)) + "px"
 }
 
 document.querySelector("iframe#topBar").onload = () => { window.onresize() }
