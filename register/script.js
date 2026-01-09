@@ -7,10 +7,6 @@ window.onresize = () => {
 
 iframe.onload = () => { window.onresize() }
 
-if(localStorage.getItem("serverURL") == null) {
-    window.location.replace("../serverSelection")
-}
-
 const registerButton = document.querySelector("div#registerButton")
 const usernameInput = document.querySelector("input#usernameInput")
 const successText = document.querySelector("h2#successText")

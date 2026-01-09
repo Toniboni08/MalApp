@@ -24,6 +24,10 @@ h1#title {
     margin: 5px;
 }
 
+.inline > p {
+    margin-right: 25px;
+}
+
 div#status {
     min-width: 100px;
     border-radius: 25px;
