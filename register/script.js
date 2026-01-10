@@ -12,7 +12,7 @@ const usernameInput = document.querySelector("input#usernameInput")
 const successText = document.querySelector("h2#successText")
 
 registerButton.onclick = () => {
-    const ws = new WebSocket("ws://localhost:8080")
+    const ws = new WebSocket(localStorage.getItem("serverURL"))
 
     ws.onopen = () => {
         const name = usernameInput.value

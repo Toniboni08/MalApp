@@ -19,7 +19,6 @@ function testConnection(url, successMessage, failMessage) {
                 successText.style.color = "green"
                 successText.innerHTML = successMessage
                 ws.close()
-                iframe.contentWindow.location.reload()
                 resolve(true)
             }
 
@@ -43,5 +42,11 @@ if (localStorage.getItem("serverURL")) {
 
 setButton.onclick = () => {
     const url = serverInput.value
-    testConnection(url, "Success", "Fail").then(success => { if (success) localStorage.setItem("serverURL", url) })
+    testConnection(url, "Success", "Fail").then(
+        success => { 
+            if (success) {
+                localStorage.setItem("serverURL", url)
+            }
+        }
+    )
 }

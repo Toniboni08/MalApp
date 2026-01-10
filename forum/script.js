@@ -31,12 +31,16 @@ let author = null
 ws.onmessage = (event) => {
     try {
         if (JSON.parse(event.data).success) {
-            document.querySelector("div#sendButton").onclick = () => {
+            const fun = () => {
                 ws.send(JSON.stringify({
                     type: "STRING"
                 }))
                 ws.send(input.textContent)
                 input.textContent = ""
+            }
+            document.querySelector("div#sendButton").onclick = fun
+            input.onkeydown = (event) => {
+                if (event.key == "Enter" && !event.shiftKey) fun()
             }
             input.contentEditable = true
         }
