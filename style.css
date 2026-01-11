@@ -33,19 +33,20 @@ div#forum {
     background-color: white;
     border-radius: 50px;
     display: flex;
-    flex-direction: row;
     padding: 50px;
+    flex-direction: row;
     align-items: center;
 }
 
 div#forum > * {
-    margin: 25px;
     user-select: none;
+
 }
 
 div#forum > p {
     font-size: 100px;
     font-weight: bold;
+    margin: 0px;
 }
 
 div#forum > img {
